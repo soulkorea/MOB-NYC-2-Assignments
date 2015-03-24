@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6EB947E6-F89C-45BB-88A0-771357F7FB39</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ViewExercises</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DE8B0B6FBB9B2DE492139B6A7F1ACAC5618467F4</key>
+		<string>https://github.com/soulkorea/MOB-NYC-2-Assignments.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>05/ViewExercises.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DE8B0B6FBB9B2DE492139B6A7F1ACAC5618467F4</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/soulkorea/MOB-NYC-2-Assignments.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DE8B0B6FBB9B2DE492139B6A7F1ACAC5618467F4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DE8B0B6FBB9B2DE492139B6A7F1ACAC5618467F4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MOB-NYC-2-Assignments</string>
+		</dict>
+	</array>
+</dict>
+</plist>
