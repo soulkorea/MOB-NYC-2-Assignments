@@ -5,28 +5,38 @@ import UIKit
 class MapViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate, UITableViewDataSource {
     
     var dicto = [String: String]()
+    var arrayOfKeys = [String]()
+    var arrayOfValues = [String]()
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dicto.count
     }
     
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        textFieldTwo.becomeFirstResponder()
-//    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NSNotificationCenter.defaultCenter()
+    }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if (textField === textFieldOne) {
-            textFieldTwo.becomeFirstResponder()
-        } else if (textField === textFieldTwo) {
-            dicto[textFieldOne.text] = textFieldTwo.text
-            tableView.reloadData()
+        let textEntry = textField.text
+        if (textEntry != nil) {
+            
+            let textOne = textFieldOne.text
+            let textTwo = textFieldTwo.text
+            
+            dicto[textOne] = textTwo
+            
             textFieldOne.text=""
             textFieldTwo.text=""
-            textFieldTwo.resignFirstResponder()
+            
+            tableView.reloadData()
         }
-        return true
+        
+        textField.resignFirstResponder()
+        
+        return false
     }
     
    
@@ -40,6 +50,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITextFieldDeleg
     @IBOutlet weak var tableView: UITableView!
     
     
+ 
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -47,7 +58,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITextFieldDeleg
         
         let sortedKeys = Array(dicto.keys).sorted(<)
         
-        cell.textLabel!.text = sortedKeys[indexPath.row]
+        cell.textLabel!.text = "\(arrayOfKeys[indexPath.row]) : \(arrayOfValues[indexPath.row])"
         cell.detailTextLabel?.text = dicto[sortedKeys[indexPath.row]]
         
 //        let person = rows.keys.array[indexPath.row]
@@ -61,7 +72,23 @@ class MapViewController: UIViewController, UITableViewDelegate, UITextFieldDeleg
         return cell
     }
     
+    func addKeysAndValuesToDicto() {
+        
+        arrayOfKeys = dicto.keys.array
+        arrayOfValues = dicto.values.array
+    }
+   
     
+    func showKeyboard() {
+        textFieldOne.backgroundColor = UIColor.blueColor()
+        textFieldTwo.backgroundColor = UIColor.blueColor()
+    }
+    
+    func hideKeyboard() {
+        textFieldOne.backgroundColor = UIColor.redColor()
+        textFieldTwo.backgroundColor = UIColor.redColor()
+        
+    }
     
         
         

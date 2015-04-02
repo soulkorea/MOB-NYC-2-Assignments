@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>94F70924-3577-4724-ABB9-4AEFF074CE4E</string>
+	<string>75DE6372-A64E-4986-8488-81CEF611D3AE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Lesson01</string>
+	<string>Midterm Calculator</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>DE8B0B6FBB9B2DE492139B6A7F1ACAC5618467F4</key>
 		<string>https://github.com/soulkorea/MOB-NYC-2-Assignments.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Lesson01/Lesson01.xcodeproj</string>
+	<string>Midterm/Midterm Calculator/Midterm Calculator.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>DE8B0B6FBB9B2DE492139B6A7F1ACAC5618467F4</key>
-		<string>../../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/soulkorea/MOB-NYC-2-Assignments.git</string>
