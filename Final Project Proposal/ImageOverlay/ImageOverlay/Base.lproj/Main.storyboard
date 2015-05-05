@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageOverlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girls.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hxY-sk-BYd">
+                                <rect key="frame" x="100" y="58" width="400" height="400"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5F-Xn-MKJ">
+                                <rect key="frame" x="10" y="-161" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50B-6F-l34">
+                                <rect key="frame" x="138" y="480" width="145" height="30"/>
+                                <state key="normal" title="rectangular_spotlight">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="un7-fx-1t4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llh-dq-RM2">
+                                <rect key="frame" x="296" y="480" width="107" height="30"/>
+                                <state key="normal" title="round_spotlight">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bfc-kA-49Z"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="6" translatesAutoresizingMaskIntoConstraints="NO" id="MES-Ms-F49">
+                                <rect key="frame" x="100" y="58" width="400" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="0t0-zt-oPw"/>
+                                    <constraint firstAttribute="width" constant="400" id="8AR-Jc-OvO"/>
+                                    <constraint firstAttribute="width" constant="400" id="Hce-03-jgI"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8AR-Jc-OvO"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="o34-iI-8b3"/>
+                                </connections>
+                            </scrollView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jqm-pU-jRT">
+                                <rect key="frame" x="241" y="518" width="118" height="31"/>
+                                <connections>
+                                    <action selector="opacitySlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="bJ2-ab-U8g"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hxY-sk-BYd" firstAttribute="top" secondItem="MES-Ms-F49" secondAttribute="top" id="7QX-px-zIv"/>
+                            <constraint firstItem="50B-6F-l34" firstAttribute="leading" secondItem="MES-Ms-F49" secondAttribute="leading" constant="38" id="B3W-Wg-Slt"/>
+                            <constraint firstItem="MES-Ms-F49" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="Gax-Kz-ZDp"/>
+                            <constraint firstItem="50B-6F-l34" firstAttribute="top" secondItem="MES-Ms-F49" secondAttribute="bottom" constant="22" id="M4d-M8-tu6"/>
+                            <constraint firstAttribute="centerX" secondItem="MES-Ms-F49" secondAttribute="centerX" id="OFu-BV-bCo"/>
+                            <constraint firstItem="hxY-sk-BYd" firstAttribute="leading" secondItem="MES-Ms-F49" secondAttribute="leading" id="VOO-3a-X7E"/>
+                            <constraint firstAttribute="centerY" secondItem="MES-Ms-F49" secondAttribute="centerY" constant="42" id="dYv-Vp-5AX"/>
+                            <constraint firstItem="llh-dq-RM2" firstAttribute="leading" secondItem="50B-6F-l34" secondAttribute="trailing" constant="13" id="gS0-GF-akc"/>
+                            <constraint firstItem="50B-6F-l34" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="122" id="hY3-RG-wbq"/>
+                            <constraint firstItem="hxY-sk-BYd" firstAttribute="height" secondItem="MES-Ms-F49" secondAttribute="height" id="krs-QV-JdR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MES-Ms-F49" secondAttribute="trailing" constant="84" id="nsP-PX-cU5"/>
+                            <constraint firstItem="MES-Ms-F49" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="84" id="oXa-bp-lDI"/>
+                            <constraint firstItem="llh-dq-RM2" firstAttribute="top" secondItem="50B-6F-l34" secondAttribute="top" id="qnW-c4-GyH"/>
+                            <constraint firstItem="hxY-sk-BYd" firstAttribute="width" secondItem="MES-Ms-F49" secondAttribute="width" id="wGH-A8-ewH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nsP-PX-cU5"/>
+                                <exclude reference="oXa-bp-lDI"/>
+                                <exclude reference="hY3-RG-wbq"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="hxY-sk-BYd" id="aYm-QJ-EJG"/>
+                        <outlet property="scrollView" destination="MES-Ms-F49" id="crR-g0-NrY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="291"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="u8r-OH-ueN">
+            <objects>
+                <viewController id="5o1-ru-HBC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fM4-uB-EOi"/>
+                        <viewControllerLayoutGuide type="bottom" id="geX-Hs-NVB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z4O-m1-tuc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LjR-Hd-CBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="girls.jpg" width="600" height="452"/>
+    </resources>
+</document>
